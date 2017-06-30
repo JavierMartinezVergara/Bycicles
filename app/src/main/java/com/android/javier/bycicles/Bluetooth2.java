@@ -35,6 +35,7 @@ public class Bluetooth2 extends AppCompatActivity {
     private Button bu;
     private TextView tex;
 
+    
     Button btnOn, btnOff, de, iz, voz;
     TextView txtArduino, txtString, txtStringLength, sensorView0, sensorView1, sensorView2, sensorView3;
     TextView txtSendorLDR;
