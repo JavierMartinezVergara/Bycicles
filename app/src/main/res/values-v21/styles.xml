@@ -1,0 +1,33 @@
+<resources>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="MapasDir" parent="Theme.AppCompat.NoActionBar">
+
+        <item name="colorPrimary">@color/textodirectios</item>
+        <item name="colorPrimaryDark">@color/mapa_directions</item>
+        <item name="colorAccent">@color/textodirectios</item>
+
+        <item name="windowActionBar">false</item>
+        <!-- Dado que nuestro fondo es azul debemos hacer que las lineas de nuestro EditText sean blancas-->
+        <item name="colorControlActivated">@android:color/white</item>
+        <item name="colorControlHighlight">@android:color/white</item>
+    </style>
+
+
+</resources>

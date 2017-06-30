@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Directions"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    android:background="@color/mapa_directions">
+
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_layout_origen"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+
+        app:errorEnabled="true"
+        app:errorTextAppearance="@style/MapasDir"
+        app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/etOrigin"
+        android:textColor="@color/textodirectios"
+        android:hint="@string/Origen"
+        android:inputType="text"
+
+        />
+    </android.support.design.widget.TextInputLayout>
+
+
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_layout_destino"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:errorEnabled="true"
+        app:errorTextAppearance="@style/MapasDir"
+        app:hintTextAppearance="@style/TextAppearence.App.TextInputLayout">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/Destino"
+        android:textColor="@color/textodirectios"
+        android:id="@+id/etDestination" />
+    </android.support.design.widget.TextInputLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ruta"
+            android:id="@+id/btnFindPath1" />
+        <ImageView
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:contentDescription="@string/Destino"
+            android:src="@drawable/ic_bike_black_24dp"/>
+        <TextView
+            android:layout_marginStart="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/km"
+            android:textColor="@color/textodirectios"
+            android:id="@+id/tvDistance" />
+
+        <ImageView
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="5dp"
+            android:src="@drawable/ic_clock_black_24dp"
+            android:contentDescription="@string/Origen" />
+
+        <TextView
+            android:layout_marginStart="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/min"
+            android:textColor="@color/textodirectios"
+            android:id="@+id/tvDuration" />
+
+
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/derecha2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:width="100dp"
+            android:layout_marginRight="10dp"
+            android:height="50dp"
+            />
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_mic_white_24dp"
+            app:fabSize="normal"
+            app:borderWidth="0dp"
+            android:elevation="8dp"
+            android:onClick="descubrir"
+            android:layout_marginTop="0dp"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/izquierda1"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:width="100dp"
+            android:layout_alignBottom="@+id/derecha2"
+            android:height="50dp"
+            />
+
+
+
+    </RelativeLayout>
+
+
+
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+      >
+
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/boton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom"
+            android:layout_margin="20dp"
+            map:fabSize="normal"
+            map:rippleColor="#222"
+            android:elevation="6dp"
+
+            />
+
+    </fragment>
+
+
+
+</LinearLayout>
